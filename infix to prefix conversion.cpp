@@ -22,7 +22,6 @@ int main(){
 	printf("Enter infix expression:");
 	scanf("%s",infix);
 	strrev(infix);
-	printf("%s",infix);
 	
 	for(int i=0;infix[i]!='\0';i++){
 		if(infix[i]==')')
