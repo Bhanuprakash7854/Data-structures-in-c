@@ -1,8 +1,9 @@
-//program to convert infix expression to postfix expression using stack in c
+//program to convert infix expression to prefix expression using stack in c
 //written by : Bhanu prakash
 
 #include<stdio.h>
 #include<stdlib.h>
+#include<string.h>
 #define MAX 15
 
 int prec(char ch);
@@ -12,42 +13,44 @@ char stack[MAX];
 int top = -1;
 
 
-void main(){
+int main(){
 	
-	char infix[15],postfix[15];
-	//j variablle is to track the postfix string length
+	char infix[15],prefix[15];
+	//j variablle is to track the prefix string length
 	int j=0;
 	
 	printf("Enter infix expression:");
 	scanf("%s",infix);
+	strrev(infix);
+	printf("%s",infix);
 	
 	for(int i=0;infix[i]!='\0';i++){
-		if(infix[i]=='(')
+		if(infix[i]==')')
 		{
 			push(infix[i]);
 		}
-		else if(infix[i]==')')
+		else if(infix[i]=='(')
 		{
-			while(stack[top]!='(')
+			while(stack[top]!=')')
 			{
-				postfix[j]=pop();
+				prefix[j]=pop();
 				j++;
 			}
 			pop();
 		}
 		else if((infix[i]>='a' && infix[i]<='z')||( infix[i]>='A' && infix[i]<='Z'))
 		{
-			postfix[j]=infix[i];
+			prefix[j]=infix[i];
 			j++;
 		}
 		else{
-			if(prec(infix[i])>prec(stack[top])){
+			if(prec(infix[i])>=prec(stack[top])){
 				push(infix[i]);
 			}
 			else{
-				while(prec(stack[top])>=prec(infix[i]))
+				while(prec(stack[top])>prec(infix[i]))
 				{
-					postfix[j]=pop();
+					prefix[j]=pop();
 					j++;
 				}
 				push(infix[i]);
@@ -56,13 +59,15 @@ void main(){
 	}
 	while(top>=0)
 	{
-		postfix[j]=pop();
+		prefix[j]=pop();
 		j++;
 	}
 	
-	postfix[j]='\0';
-	printf("postfix expression : %s",postfix);
+	prefix[j]='\0';
+	strrev(prefix);
+	printf("prefix expression : %s",prefix);
 	
+	return 0;
 }
 
 //to check prcedence of operators i have given some random integer values according to their actual precedence
@@ -93,6 +98,7 @@ int prec(char ch)
 			return 2;
 			break;
 	}
+	return 0;
 }
 
 //to insert a character in stack
