@@ -1,3 +1,6 @@
+//program to evaluate postfix expression using stack in c
+//written by : Bhanu prakash
+
 #include<stdio.h>
 #include<stdlib.h>
 #define MAX 15
