@@ -87,7 +87,7 @@ void insert()
 	else if(pos>1 && pos<=count)
 	{
 		temp = head;
-		for(i=1;i<count-1;i++)
+		for(i=1;i<pos-1;i++)
 		temp = temp->next;
 		temp->next->prev = nn;
 		nn->next = temp->next;
