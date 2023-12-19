@@ -7,7 +7,10 @@
 #define MAX 5
 //defining stack array as global so it can be acessed in all functions
 int stack[MAX],top = -1;
-
+void push();
+void pop();
+void peek();
+void display();
 
 void main(){
 	//runnnig an infinite loop
