@@ -40,13 +40,17 @@ void push()
 {
 	//if stack is full the program will exit
 	if(top==MAX-1)
-	return;
-	
+	{
+		printf("stack is full\n");
+	}
+	else
+	{
 	int n;
 	printf("Enter the number:");
 	scanf("%d",&n);
 	top++;
 	stack[top]=n;
+	}
 }
 
 
@@ -55,7 +59,10 @@ void pop()
 {
 	//if stack is empty and you try to pop the program will exit
 	if(top<0)
-	return;
+	{
+		printf("Stack is empty\n");
+	}
+	else
 	top--;
 }
 
