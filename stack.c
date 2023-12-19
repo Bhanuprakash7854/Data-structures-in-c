@@ -28,7 +28,7 @@ void main(){
 			break;
 			case 3:peek();
 			break;
-			case 4:disiplay();
+			case 4:display();
 			break;
 			case 5:return;
 		}
@@ -67,7 +67,7 @@ void peek()
 
 
 //to disiplay all the values in stack
-void disiplay()
+void display()
 {
 	for(int i=top;i>0;i--)
 	{
