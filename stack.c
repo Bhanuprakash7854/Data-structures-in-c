@@ -17,7 +17,7 @@ void main(){
 	while(1)
 	{
 		int choice;
-		printf("Enter the operation :\n");
+		printf("\nEnter the operation :\n");
 		printf("1.push\n2.pop\n3.peek\n4.disiplay\n5.exit\n");
 		scanf("%d",&choice);
 		switch(choice)
@@ -69,7 +69,7 @@ void peek()
 //to disiplay all the values in stack
 void display()
 {
-	for(int i=top;i>0;i--)
+	for(int i=top;i>=0;i--)
 	{
 		printf("%d\t",stack[i]);
 	}
