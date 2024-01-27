@@ -1,5 +1,3 @@
-//circular list implementation
-//Written by:Bhanu Prakash
 
 #include<stdio.h>
 #include<stdlib.h>
