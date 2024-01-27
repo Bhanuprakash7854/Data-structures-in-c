@@ -1,5 +1,4 @@
-//Queue using array in c
-//Written by:Bhanu Prakash
+
 
 #include<stdio.h>
 #include<stdlib.h>
