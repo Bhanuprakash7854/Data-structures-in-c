@@ -1,5 +1,3 @@
-//program to convert infix expression to prefix expression using stack in c
-//written by : Bhanu prakash
 
 #include<stdio.h>
 #include<stdlib.h>
@@ -16,7 +14,7 @@ int top = -1;
 int main(){
 	
 	char infix[15],prefix[15];
-	//j variablle is to track the prefix string length
+	
 	int j=0;
 	
 	printf("Enter infix expression:");
@@ -69,8 +67,7 @@ int main(){
 	return 0;
 }
 
-//to check prcedence of operators i have given some random integer values according to their actual precedence
-//for example * has higher precedence than + so i gave 2 for * and 1 for +
+
 int prec(char ch)
 {
 	switch(ch)
@@ -100,10 +97,10 @@ int prec(char ch)
 	return 0;
 }
 
-//to insert a character in stack
+
 void push(char ch)
 {
-	//if stack is full the program will exit
+	
 	if(top==MAX-1)
 	{
 		printf("stack overflow!!!");
@@ -114,10 +111,10 @@ void push(char ch)
 }
 
 
-//to remove a character from stack
+
 char pop()
 {
-	//if stack is empty and you try to pop the program will exit
+	
 	if(top<0)
 	{
 		printf("stack underflow!!!");
