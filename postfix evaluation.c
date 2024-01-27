@@ -1,5 +1,4 @@
-//program to evaluate postfix expression using stack in c
-//written by : Bhanu prakash
+
 
 #include<stdio.h>
 #include<stdlib.h>
@@ -55,10 +54,10 @@ int compute(int x,int y,char op)
 }
 
 
-//to insert a character in stack
+
 void push(int n)
 {
-	//if stack is full the program will exit
+	
 	if(top==MAX-1)
 	{
 		printf("stack overflow!!!");
@@ -69,10 +68,10 @@ void push(int n)
 }
 
 
-//to remove a character from stack
+
 int pop()
 {
-	//if stack is empty and you try to pop the program will exit
+	
 	if(top<0)
 	{
 		printf("stack underflow!!!");
