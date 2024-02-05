@@ -50,7 +50,7 @@ void insert()
 
 void Delete()
 {
-	if(fornt==NULL)
+	if(front==NULL)
 	printf("Under flow\n");
 	else
 	{
